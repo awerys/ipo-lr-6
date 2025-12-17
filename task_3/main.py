@@ -1,17 +1,11 @@
 #Вариант - 1 
 def get_number_of_lines():
-    """Запрашивает у пользователя количество строк с проверкой"""
     while True:
         try:
             n = int(input("Введите количество строк: "))
-            if n <= 0:
-                print("Количество строк должно быть положительным числом!")
                 continue
             return n
-        except ValueError:
-            print("Пожалуйста, введите целое число!")
 def get_lines(n):
-    """Запрашивает у пользователя n строк"""
     lines = []
     print(f"\nВведите {n} строк:")
     for i in range(n):
@@ -19,7 +13,6 @@ def get_lines(n):
         lines.append(line)
     return lines
 def count_unique_words(lines):
-    """Подсчитывает количество различных слов в тексте"""
     all_words = []
     for line in lines:
         # Разбиваем строку на слова (последовательности непробельных символов)
